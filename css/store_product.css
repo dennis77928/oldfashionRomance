@@ -1,0 +1,673 @@
+@import "./common/reset.css";
+@import "./common/fonts.css";
+@import "./common/left_navBar.css";
+@import "./common/basic_layout.css";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 0;
+  font-family: "YaoFont";
+}
+
+
+a#store_navlink::after{
+  content: "";
+  background-color: #DDA52D;
+  height: 10px;
+  display: block;
+}
+
+
+@keyframes jumping{
+  0% {
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+button.go_top{
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/logo/Logo_circle.png");
+  background-color: rgba(0,0,0,0);
+  background-position: center;
+  background-size: cover;
+  padding: 2px;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  cursor: pointer;
+
+  animation-name: jumping;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+  opacity: 0;
+  transition: opacity .8s;
+}
+button.-onScroll{
+  opacity: 1;
+  transition: opacity .8s;
+}
+
+button.go_top:hover{
+  animation-name: none;
+  transform: rotate(160deg) scale(1.1);
+}
+
+
+div.main_content{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.product_main,
+div.product_title,
+div.procuct_detail,
+div.product_recommend{
+  /* border: 3px solid green; */
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+div.procuct_detail{
+  /* height: 750px; */
+  padding: 0 5px 20px 5px;
+}
+
+div.product_main{
+  display: flex;
+}
+
+div.product_main div.product_img,
+div.product_main div.product_info{
+  /* border: 3px solid red; */
+  flex-grow: 1;
+}
+
+
+
+div.product_main div.product_img{
+  display: flex;
+  margin-right: 30px;
+}
+
+
+
+div.product_main div.product_img div{
+  /* border: 1px solid orange; */
+}
+
+div.product_main div.product_img div.img_small{
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-right: 20px;
+}
+
+div.product_main div.product_info form.info_form{
+  display: flex;
+  flex-direction: column;
+  font-family: "TaipeiFontReg";
+}
+
+
+div.product_main div.product_info form.info_form p.price{
+  margin-bottom: 40px;
+  font-size: 55px;
+  color: #DDA52D;
+}
+
+div.product_main div.product_info form.info_form label{
+  font-family: "TaipeiFontLight";
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+form.info_form select.penSelect{
+  outline:none;
+  border:2px solid #666;
+  font-size: 24px;
+  font-family: "TaipeiFontLight";
+  margin-bottom: 40px;
+  width: 230px;
+  height: 50px;
+  background-color: rgba(0,0,0,0);
+}
+
+form.info_form button{
+  outline:none;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+  font-family: "TaipeiFontReg";
+  margin-bottom: 40px;
+  width: 230px;
+  height: 50px;
+  background-color: rgba(0,0,0,0);
+  cursor: pointer;
+  /* box-shadow: 0px 0px 10px black; */
+}
+
+form.info_form button#buy{
+  border: 2px solid #DDA52D;
+  background-color: #DDA52D;
+  color: white;
+  box-shadow: 1px 1px 0 gray;
+  transform: scale(1);
+  transition: all .5s;
+}
+form.info_form button#buy i{
+  color: white;
+}
+
+form.info_form button#buy:hover{
+  transform: scale(1.15);
+  box-shadow: 3px 3px 1px gray;
+}
+
+
+form.info_form button#favorite{
+  border: 2px solid #28435D;
+  background-color: rgba(0,0,0,0);
+  color: #28435D;
+}
+form.info_form button#favorite i{
+  color: #28435D;
+}
+
+form.info_form button#favorite:hover{
+  background-color: #28435D;
+  color: white;
+  box-shadow: 2px 2px 1px gray;
+}
+form.info_form button#favorite:hover i{
+  color: white;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+i.fa-shopping-bag.-addItem{
+  animation-name: zoom;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+}
+
+i.fa-heart.-addItem{
+  color: red;
+  animation-name: zoom;
+  animation-duration: .2s;
+  animation-iteration-count: 2;
+}
+
+
+
+/* 加減按鈕 */
+ul.counter{
+  display: flex;
+  /* border: 1px solid red; */
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+}
+ul.counter li{
+  list-style-type:none;
+  width:30px;
+  height:36px;
+  text-align:center;
+  /* border:2px solid #666; */
+  background-color: rgba(0,0,0,0);
+}
+ul.counter li#countnum{
+  color: #666;
+  font-size: 24px;
+  width: 150px;
+  margin: 0 10px;
+  border:2px solid #666;
+  vertical-align: bottom;
+}
+
+ul.counter li i{
+  margin-bottom: 0;
+}
+
+div.product_title h2{
+  /* border: 1px solid red; */
+  font-size: 60px;
+  font-family: "TaipeiFontReg";
+  margin:30px 0;
+}
+
+div.tab_container{
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.tab_contents{
+  font-size: 30px;
+  font-family: "TaipeiFontLight";
+}
+
+/* 頁籤列表 */
+div.tab_container div.tab_list_block ul.tab_list{
+  font-size: 40px;
+  font-family: "TaipeiFontLight";
+  border-bottom: 1px solid gray;
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+div.tab_container div.tab_list_block ul.tab_list > li{
+  display: inline-block;
+  /* border: 1px solid blue; */
+
+}
+
+div.tab_container div.tab_list_block ul.tab_list > li > a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 2px 150px 5px 150px;
+  cursor: pointer;
+  color: #ccc;
+
+  position: relative;
+  top: 1px;
+}
+
+/* 畫出底部黑線 */
+div.tab_container div.tab_list_block ul.tab_list > li > a::after{
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  bottom:1px;
+  left: -1px;
+  z-index: 1;
+}
+div.tab_container div.tab_list_block ul.tab_list > li > a.-on{
+  /* border: 1px solid black; */
+  color: black;
+}
+/* 將底部黑線改成白色 */
+div.tab_container div.tab_list_block ul.tab_list > li > a.-on::after{
+  background-color: #DDA52D;
+  width: 100%;
+  left: 0;
+}
+
+@keyframes opacityEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* 頁籤內容區塊 */
+div.tab_container div.tab_contents{
+  margin-top: 10px;
+  /* border: 1px solid black; */
+}
+div.tab_container div.tab_contents div.tab{
+  padding: 10px;
+  display: none;
+}
+div.tab_container div.tab_contents div.tab.-on{
+  display: flex;
+  flex-direction: column;
+  font-size: 28px;
+
+  animation-name: opacityEffect;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+}
+
+div.tab_container div.tab_contents div.tab > p{
+  line-height: 1.8;
+}
+
+div.img_small div{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 25px;
+}
+div.img_small div img{
+  width: 100%;
+  height: 100%;
+}
+
+div.img_main{
+  width: 700px;
+  height: 700px;
+}
+div.img_main img{
+  width: 100%;
+  height: 100%;
+}
+
+div.product_recommend{
+  /* border: 2px solid green; */
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  order: 5;
+}
+h2.recommend_title{
+  /* border: 1px solid red; */
+  width: 1000px;
+  padding: 15px 0;
+  font-family: "TaipeiFontReg";
+  font-size: 24px;
+  order: 4;
+}
+
+.product_recommend > div.recommend_item{
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 15px; */
+  align-items: center;
+  justify-content: center;
+}
+
+.recommend_item img{
+  /* border: 1px solid orange; */
+  /* width: 250px;
+  height: 250px; */
+  width: 200px;
+  height: 200px;
+  /* box-shadow: 2px 2px 5px gray; */
+
+}
+
+.recommend_item p{
+  /* border: 1px solid blue; */
+  /* width: 250px; */
+  font-family: "TaipeiFontLight";
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.recommend_item a{
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+div.tab2>p>a{
+  text-decoration: none;
+  color: #28435D;;
+  font-family: "TaipeiFontReg";
+}
+div.tab2>p>a:hover{
+  background-color: #DDA52D;
+  color: white;
+}
+
+/* --- 輪播套件樣式 --- */
+.slick-next:before, .slick-prev:before {
+  color: #dda52d;
+}
+
+
+@media screen and (max-width: 1440px) {
+  div.product_main div.product_info form.info_form p.price {
+    font-size: 45px;
+  }
+  div.product_main div.product_img{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  div.product_main div.product_img div.img_small{
+    margin-top: 20px;
+    margin-right: 0;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  div.img_main {
+    width: 600px;
+    height: 600px;
+  }
+  div.img_small div{
+    width: 130px;
+    height: 130px;
+    margin-bottom: 0;
+    margin: 0 15px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.product_main {
+    flex-direction: column;
+    order: 1;
+  }
+  div.procuct_detail{
+    order: 3;
+  }
+  div.product_main div.product_img{
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  div.product_main div.product_info form.info_form p.price {
+    font-size: 40px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+  }
+
+  div.product_main div.product_info form.info_form label{
+    font-size: 18px;
+    margin-left: 10%;
+    margin-bottom: 10px;
+  }
+  div.product_main div.product_info form.info_form select.penSelect{
+    font-size: 20px;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 40px;
+  }
+  div.product_title{
+    margin-bottom: 0;
+  }
+  div.product_title h2{
+    font-size: 40px;
+    order: 0;
+  }
+
+  /* ----- 加減按鈕 ----- */
+  ul.counter{
+    justify-content: center;
+    width: auto;
+  }
+  ul.counter li#countnum{
+    font-size: 24px;
+    width: 65%;
+  }
+
+  div.product_main div.product_info form.info_form button{
+    margin: 10px auto;
+  }
+
+  /* 頁籤列表 */
+  div.tab_container div.tab_list_block ul.tab_list{
+    font-size: 30px;
+  }
+  div.tab_container div.tab_list_block ul.tab_list > li > a{
+    padding: 2px 80px 5px 80px;
+  }
+
+  /* 推薦商品 */
+  div.product_recommend{
+    width: 700px;
+  }
+  h2.recommend_title{
+    width: 700px;
+  }
+  .recommend_item img{
+    width: 150px;
+    height: 150px;
+  }
+  .recommend_item p{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.img_main {
+    width: 500px;
+    height: 500px;
+  }
+  div.img_small div{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0;
+    margin: 0 15px;
+  }
+  div.product_main div.product_info form.info_form p.price {
+    font-size: 36px;
+  }
+  div.product_title{
+    /* align-self: flex-start;
+    margin-left: 5%; */
+  }
+  div.product_title h2{
+    font-size: 30px;
+  }
+
+  /* 頁籤列表 */
+  div.tab_container div.tab_list_block ul.tab_list{
+    font-size: 24px;
+  }
+  div.tab_container div.tab_list_block ul.tab_list > li > a{
+    padding: 2px 60px 5px 60px;
+  }
+
+  /* 頁籤內容區塊 */
+  div.tab_container div.tab_contents div.tab.-on{
+    font-size: 24px;
+  }
+  div.tab_container div.tab_contents div.tab > p{
+    line-height: 1.8;
+  }
+
+  /* 推薦商品 */
+  div.product_recommend{
+    width: 500px;
+  }
+  h2.recommend_title{
+    width: 500px;
+  }
+  .recommend_item img{
+    width: 100px;
+    height: 100px;
+  }
+  .recommend_item p{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.img_main {
+    width: 300px;
+    height: 300px;
+  }
+
+  div.img_small div{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0;
+    margin: 0 5px;
+  }
+  div.product_title h2{
+    font-size: 24px;
+  }
+
+  /* 頁籤列表 */
+  div.tab_container div.tab_list_block ul.tab_list{
+    font-size: 20px;
+  }
+  div.tab_container div.tab_list_block ul.tab_list > li > a{
+    padding: 2px 50px 5px 50px;
+  }
+  /* 頁籤內容區塊 */
+  div.tab_container div.tab_contents div.tab.-on{
+    font-size: 16px;
+  }
+  div.tab_container div.tab_contents div.tab > p{
+    line-height: 1.8;
+  }
+
+  /* 推薦商品 */
+  div.product_recommend{
+    width: 320px;
+  }
+  .recommend_item img{
+    width: 80px;
+    height: 80px;
+  }
+  h2.recommend_title{
+    width: 300px;
+  }
+}
+@media screen and (max-width: 320px) {
+  div.img_main {
+    width: 280px;
+    height: 280px;
+  }
+  div.img_small div{
+    width: 70px;
+    height: 70px;
+  }
+  div.product_title h2{
+    font-size: 16px;
+  }
+
+  /* 頁籤列表 */
+  div.tab_container div.tab_list_block ul.tab_list{
+    font-size: 20px;
+  }
+  div.tab_container div.tab_list_block ul.tab_list > li > a{
+    padding: 2px 30px 5px 30px;
+  }
+  /* 頁籤內容區塊 */
+  div.tab_container div.tab_contents div.tab.-on{
+    font-size: 14px;
+  }
+
+  /* 推薦商品 */
+  div.product_recommend{
+    width: 300px;
+  }
+  h2.recommend_title{
+    width: 300px;
+  }
+}

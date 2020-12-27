@@ -1,0 +1,468 @@
+@import "./common/reset.css";
+@import "./common/fonts.css";
+@import "./common/left_navBar.css";
+@import "./common/basic_layout.css";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 0;
+  font-family: "YaoFont";
+}
+
+a#store_navlink::after{
+  content: "";
+  background-color: #DDA52D;
+  height: 10px;
+  display: block;
+}
+
+@keyframes opacityEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.main_content{
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.tab_container{
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab_list{
+  font-size: 40px;
+  font-family: "TaipeiFontLight" ;
+}
+
+.tab_contents{
+  font-size: 30px;
+  font-family: "TaipeiFontLight" ;
+}
+
+/* 頁籤列表 */
+div.tab_container div.tab_list_block ul.tab_list{
+  border-bottom: 1px solid gray;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+
+div.tab_container div.tab_list_block ul.tab_list > li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  /* border: 1px solid blue; */
+}
+div.tab_container div.tab_list_block ul.tab_list > li > a{
+  text-decoration: none;
+  text-align: center;
+
+  display: inline-block;
+  width: 100%;
+  padding: 2px 0;
+  cursor: pointer;
+  color: #ccc;
+
+  position: relative;
+  top: -2px;
+}
+
+/* 畫出底部 */
+div.tab_container div.tab_list_block ul.tab_list > li > a::after{
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  bottom: -3px;
+  left: -1px;
+  z-index: 1;
+}
+div.tab_container div.tab_list_block ul.tab_list > li > a.-on{
+  /* border: 1px solid black; */
+  color: black;
+}
+/* 將底部黑線改成白色 */
+div.tab_container div.tab_list_block ul.tab_list > li > a.-on::after{
+  background-color: #DDA52D;
+  width: 100%;
+  left: 0;
+}
+
+@media screen and (max-width: 1440px) {
+  div.tab_container div.tab_list_block ul.tab_list > li{
+    width: 320px;
+  }
+  .tab_list{
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  div.tab_container div.tab_list_block ul.tab_list > li{
+    width: 280px;
+  }
+}
+@media screen and (max-width: 960px){
+  div.tab_container div.tab_list_block ul.tab_list > li{
+    width: 250px;
+  }
+}
+@media screen and (max-width: 768px){
+  div.tab_container div.tab_list_block ul.tab_list > li{
+    width: 120px;
+  }
+  .tab_list{
+    font-size: 24px;
+    /* font-size: 5vw; */
+  }
+}
+
+
+/* 頁籤內容區塊 */
+div.tab_container div.tab_contents{
+  margin-top: 10px;
+  /* border: 1px solid black; */
+}
+div.tab_container div.tab_contents div.tab{
+  padding: 10px;
+  display: none;
+}
+div.tab_container div.tab_contents div.tab.-on{
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+
+  animation-name: opacityEffect;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+}
+
+/* div.tab_contents div.tab1 div.pen_product{ */
+div.tab_contents div.tab div.pen_product{
+  /* border: 1px solid red; */
+  flex-grow: 1;
+  display: flex;
+  margin: 30px 0;
+}
+
+/* div.tab_contents div.tab1 div.pen_product > div{ */
+div.tab_contents div.tab div.pen_product > div{
+  /* border: 1px solid green; */
+  flex-grow: 1;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* div.tab_contents div.tab1 div.pen_product div.product_img{ */
+div.tab_contents div.tab div.pen_product div.product_img{
+  /* border: 1px solid red; */
+  border-radius: 50%;
+  position: relative;
+}
+
+/* div.tab_contents div.tab1 > div.even > div.product_detail{ */
+div.tab_contents div.tab > div.even > div.product_detail{
+  /* border: 1px solid black; */
+  order: -1;
+}
+
+
+/* div.tab_contents div.tab1 div.pen_product div.product_detail p{ */
+div.product_detail > p{
+  line-height: 2.5;
+}
+
+div.tab_contents div.tab div.pen_product div.product_detail div.btn{
+  display: flex;
+  margin-top: 20px;
+}
+
+/* div.tab_contents div.tab1 div.pen_product div.product_detail div.btn button{ */
+div.product_detail div.btn div.detail,
+div.product_detail div.btn button{
+  font-size: 26px;
+  font-family: "TaipeiFontReg";
+  color: white;
+  border: 2px solid #DDA52D;
+  border-radius: 10px;
+  padding: 10px 18px;
+  margin: 0 10px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 2px 2px 1px gray;
+
+  background-color: #DDA52D;
+
+  transform: scale(1);
+
+  transition: all .8s;
+}
+
+div.product_detail div.btn div.detail{
+  color: rgba(40, 67, 93, 1);
+  border: 2px solid #28435D;
+  background-color: rgba(0,0,0,0);
+  order: -1;
+}
+
+div.product_detail div.btn div.detail a{
+  text-decoration: none;
+  /* color: #28435D; */
+}
+
+div.detail a p{
+  color: #28435D;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.05);
+  }
+  60%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+
+div.circle_mask{
+  border: 1px solid #DDA52D;
+  border-radius: 50%;
+  height: 450px;
+  width: 450px;
+  overflow: hidden;
+  /* background-color: rgba(0, 0, 0, 0); */
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  animation-name: zoom;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+}
+
+div.circle_border{
+  /* border: 5px solid #DDA52D; */
+  border-radius: 50%;
+  height: 426px;
+  width: 426px;
+  overflow: hidden;
+
+  position: absolute;
+  top: 37px;
+  left: 37px;
+  z-index: 10;
+
+}
+
+div.circle_border a img{
+  width: 100%;
+  height: 100%;
+
+  transform: scale(1);
+  transition: transform .8s;
+}
+
+div.circle_border a:hover img{
+  /* border: 3px solid black; */
+  transform: scale(1.1);
+}
+
+div.product_img:hover div.circle_mask{
+  animation-name: none;
+  border: 3px solid #DDA52D;
+}
+
+div.product_detail div.btn button:hover{
+  box-shadow: 3.5px 3.5px 1px gray;
+  transform: scale(1.1);
+}
+
+div.product_detail div.btn div.detail:hover{
+  background-color: #28435D;
+}
+
+div.product_detail div.btn div.detail:hover a > p{
+  color: white;
+}
+
+
+@keyframes jumping{
+  0% {
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+button.go_top{
+  width: 60px;
+  height: 60px;
+  background-image: url("../images/logo/Logo_circle.png");
+  background-color: rgba(0,0,0,0);
+  background-position: center;
+  background-size: cover;
+  padding: 2px;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  cursor: pointer;
+
+  animation-name: jumping;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+  opacity: 0;
+  transition: opacity .8s;
+
+}
+
+button.-onScroll{
+  opacity: 1;
+  transition: opacity .8s;
+}
+
+button.go_top:hover{
+  animation-name: none;
+  transform: rotate(160deg) scale(1.1);
+}
+@keyframes dblScale {
+  0% {
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+i.fa-shopping-bag.-addItem{
+  animation-name: dblScale;
+  animation-duration: .2s;
+  animation-iteration-count: 2;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px) {
+
+  div.tab_contents div.tab div.pen_product div.product_detail{
+    padding-top: 40px;
+    padding-right: 50px;
+    justify-content: flex-start;
+    width: 350px;
+  }
+  div.tab_contents div.tab div.pen_product.even div.product_detail{
+    padding-right: 0;
+    padding-left: 50px;
+  }
+  div.tab_contents div.tab div.pen_product div.product_img{
+    left: -30px;
+    width: 380px;
+  }
+  div.tab_contents div.tab div.pen_product.even div.product_img{
+    left: 10px;
+  }
+  div.product_detail > p{
+    font-size: 24px;
+    line-height: 2;
+  }
+
+  div.product_detail div.btn div.detail,
+  div.product_detail div.btn button{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .tab_contents {
+    font-size: 28px;
+  }
+
+  div.circle_mask{
+    height: 350px;
+    width: 350px;
+    left: 35px;
+    animation: none;
+  }
+
+  div.circle_border{
+    height: 326px;
+    width: 326px;
+    overflow: hidden !important;
+    left: 47px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+
+  div.tab_contents div.tab div.pen_product{
+    flex-direction: column;
+  }
+  div.tab_contents div.tab div.pen_product > div {
+    justify-content: flex-start;
+    width: auto;
+    height: 350px;
+  }
+  div.tab_contents div.tab > div.even > div.product_detail{
+    order: 1;
+  }
+  div.circle_mask{
+    height: 300px;
+    width: 300px;
+
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: none;
+  }
+
+  div.circle_border{
+    height: 276px;
+    width: 276px;
+    overflow: hidden !important;
+
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .tab_contents {
+    font-size: 24px;
+  }
+
+  div.product_detail div.btn div.detail,
+  div.product_detail div.btn button{
+    font-size: 18px;
+  }
+}

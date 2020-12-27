@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <title>老學問</title>
+    <link href="./hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/knowledge.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- TweenMax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+    crossorigin="anonymous"></script>
+    <!-- ScrollMagic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- slick carousel -->
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="left_bar">
+        <div class="logo">
+          <a href="./index.html">
+            <img class="logo_img" src="./images/logo/Logo_circle.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a id="ink_navlink" href="./ink.html">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="./store.html">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="#">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-line"></i>
+        </div>
+      </div>
+
+      <nav class="hamburger_wrap">
+        <button class="hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a a id="ink_navlink" href="./ink.html">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="./store.html">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="#">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="shopping_icon">
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+          <a href="#"><i class="far fa-heart"></i></a>
+        </div>
+      </nav>
+
+      <div class="right_main">
+        <div class="breadcrumb">
+          <nav>
+          	<ol>
+          		<li><a href="./index.html">老派浪漫</a></li>
+          		<li>老學問</li>
+          	</ol>
+          </nav>
+        </div>
+
+        <div class="title">
+          <h1 class="title_text">老学问</h1>
+        </div>
+
+
+        <div class="main_content">
+
+          <ul data-aos="zoom-in" data-aos-duration="3000">
+            <li class="left_block">
+              <a class="pen_alink " href="#pen_section">
+                <img class="online_img" src="./images/knowledge/pen.png" alt="鋼筆知識">
+                <p class="pen_title title">钢笔知识</p>
+                <!-- <p class="inkKnow_subtitle">
+                  什麼是卡水和吸墨器呢？<br>
+                  鋼筆裝墨方式？<br>
+                  如何選擇鋼筆用墨水？<br>
+                  墨水有保存期限嗎？
+                </p> -->
+              </a>
+            </li>
+            <li class="right_block">
+              <a class="ink_alink" href="#ink_section">
+                <img class="order_img" src="./images/knowledge/ink.png" alt="墨水知識">
+                <p class="ink_title title">墨水知识</p>
+                <!-- <p class="penKnow_subtitle">
+                  鋼筆的握位是什麼？ <br>
+                  筆蓋是否要套在筆桿尾端？ <br>
+                  字跡為何斷斷續續？ <br>
+                  鋼筆要如何攜帶出門？
+                </p> -->
+              </a>
+            </li>
+          </ul>
+
+          <!-- <div id="pen_section"> -->
+            <div class="question" id="pen_section">
+
+              <p class="question"><i class="far fa-question-circle"></i>鋼筆的握位是什麼？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>手持筆寫字時，姆指、食指、中指碰到的那區域。</p>
+
+              <p class="question"><i class="far fa-question-circle"></i>筆蓋是否要套在筆桿尾端？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>筆蓋套在筆尾會改變重心和平衡有人寫字拿的比較前面，有的比較後面，套與不套要看自己順不順手</p>
+
+              <p class="question"><i class="far fa-question-circle"></i>字跡為何斷斷續續？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>吸墨器常發生斷水現象是吸墨器通病，大氣壓力大過於墨水重量，導致墨水吸附在管壁掉不下來，多磨幾次讓吸墨器內壁表面張力破壞即可！</p>
+
+              <p class="question"><i class="far fa-question-circle"></i>鋼筆要如何攜帶出門？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>鋼筆有專用套，有分單支、兩支或三支裝，甚至十支裝不等。材質有布、塑膠、真皮等等。</p>
+
+              <p class="question"><i class="far fa-question-circle"></i>鋼筆如何保養？</p>
+              <p class="answer last"><i class="fas fa-pen-nib"></i>
+                1.用細緻的布（超細纖維等等）來擦拭筆桿，乾淨就好（指紋不要留在上面），不需上蠟，也不要在金屬的部份擦銅油之類的東西。<br>
+                2.銀筆氧化變黑的時候，可以用拭銀布擦。<br>
+                3.如果是活塞上水式鋼筆，筆桿不可泡水，免得裡面結構生鏽。<br>
+                4.筆蓋內若有大量的舊墨殘留，可以沖水，但要甩乾，不要泡在水裡，免得金屬零件生鏽。
+              </p>
+            </div>
+          <!-- </div> -->
+
+          <!-- <div id="ink_section"> -->
+            <div class="question" id="ink_section">
+              <p class="question"><i class="far fa-question-circle"></i>什麼是卡水和吸墨器呢？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>
+                卡式墨水主要是方便好攜帶，請注意因為接口形狀各廠牌都不太一樣，需使用同一廠牌的卡水。<br>
+
+                吸墨器的好處是不拘「墨水」的廠牌，優點是可以挑選的顏色非常多，需要注意的是，各廠牌的接口形狀都不太一樣。<br>
+              </p>
+
+              <p class="question"><i class="far fa-question-circle"></i>鋼筆裝墨方式？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>
+                一般來說鋼筆上墨水的方式有：<br>
+
+                【卡式墨水Cartridge】卡水外型有如一支一支的小管子，裡面已填充好墨水，卡式墨水有兩頭，其中一頭插到鋼筆裡面，需等五到十分鐘墨水流至筆尖就可以寫，用完即丟，屬於拋棄式的產品。卡水通常是賣一盒的，有的5支或一打裝，會將墨水的顏色標示在盒外，買前需看清楚。<br><br>
+
+                【吸墨器式Converter】內無墨水，需搭配「瓶裝」墨水使用，可重複使用。<br><br>
+
+                【活塞式】將筆桿作成吸墨器，需搭配瓶裝墨水使用，容量大是其優勢。
+
+              </p>
+
+              <p class="question"><i class="far fa-question-circle"></i>如何選擇鋼筆用墨水？</p>
+              <p class="answer"><i class="fas fa-pen-nib"></i>吸墨器常發生斷水現象是吸墨器通病，大氣壓力大過於墨水重量，導致墨水吸附在管壁掉不下來，多磨幾次讓吸墨器內壁表面張力破壞即可！</p>
+
+              <p class="question"><i class="far fa-question-circle"></i>墨水有保存期限嗎？</p>
+              <p class="answer last"><i class="fas fa-pen-nib"></i>鋼筆墨水只要不開封，可以無限期保存。 如開封過的墨水，使用完也要關好密封；否則有可能會發霉。</p>
+
+
+            </div>
+          <!-- </div> -->
+
+          <footer class="moblie_footer">
+            <p class="footer_text left_p">老派浪漫 鋼筆工作室<br>台北市中山區南京東路三段219號<br>Copyright ⓒ 老派浪漫 Co., Ltd.</p>
+            <div class="icon">
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+              <a href="#"><i class="fab fa-instagram-square"></i></a>
+              <a href="#"><i class="fab fa-line"></i></i></a>
+            </div>
+          </footer>
+
+          <button type="button" class="go_top">
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      // DOM 載入完成後執行
+      $(function(){
+
+        $('.autoplay').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000
+        });
+
+        // hamburger icon 的切換
+        $("button.hamburger").on("click", function(){
+          $(this).toggleClass("is-active");
+          $("div.nav_wrap").slideToggle();
+        });
+
+        // 點擊按鈕，頁面滑到最上方
+        $(".go_top").on("click", function(e){
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: 0
+          }, 500);
+        });
+
+        $(window).scroll(function(){
+          var scroll_top = $(window).scrollTop();
+
+          if(scroll_top > 0){
+            $('.go_top').addClass('-onScroll');
+          }else{
+            $('.go_top').removeClass('-onScroll');
+          }
+        });
+
+        $('.main_content').on('click','a', function (e) {// 監聽 nav 下的每個 a
+
+            e.preventDefault();
+            const anchor = $(this).attr('href');//取得個別點擊時的href，就是個別id的區塊
+            const linkScroll = $(anchor).offset().top;// 每個區塊的最上方距離 document 最上方有多遠
+
+            // console.log("linkScroll " +linkScroll);
+            $('html, body').animate({
+                scrollTop: linkScroll
+            },500)
+        });
+
+
+
+        /* --- 動態加入aos屬性 --- */
+        let w = $(window).width();
+        if(w <= 768){
+          $('p.question').attr('data-aos', '');
+          $('.answer').attr('data-aos', 'fade-down');
+          $('.answer').attr('data-aos-anchor-placement', 'top-center');
+        }else{
+          $('p.question').attr('data-aos', 'zoom-in-right');
+          $('.answer').attr('data-aos', 'zoom-in-left');
+          $('.answer').attr('data-aos-anchor-placement', '');
+        }
+        AOS.init();
+        // 瀏覽器resize時
+				$(window).resize(function() {
+          let w = $(window).width();
+
+          if(w <= 768){
+            $('p.question').attr('data-aos', '');
+            $('.answer').attr('data-aos', 'fade-down');
+            $('.answer').attr('data-aos-anchor-placement', 'top-center');
+          }else{
+            $('p.question').attr('data-aos', 'zoom-in-right');
+            $('.answer').attr('data-aos', 'zoom-in-left');
+            $('.answer').attr('data-aos-anchor-placement', '');
+          }
+          AOS.init();
+				});
+
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

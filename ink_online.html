@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <title>老派特調</title>
+    <link href="./hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ink_online.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="left_bar">
+        <div class="logo">
+          <a href="./index.html">
+            <img class="logo_img" src="./images/logo/Logo_circle.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a id="ink_navlink" href="#">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="./store.html">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="./knowledge.html">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-line"></i>
+        </div>
+      </div>
+
+      <nav class="hamburger_wrap">
+        <button class="hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="logo_mobile">
+          <a href="./index.html">
+            <img class="logo_img_mobile" src="./images/logo/Logo_circle_small.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a a id="ink_navlink" href="#">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="./store.html">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="./knowledge.html">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="shopping_icon">
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+          <a href="#"><i class="far fa-heart"></i></a>
+        </div>
+      </nav>
+
+
+      <div class="right_main">
+        <div class="breadcrumb">
+          <nav>
+          	<ol>
+          		<li><a href="./index.html">老派浪漫</a></li>
+          		<li><a href="./ink.html">老派特調</a></li>
+          		<li>線上調製</li>
+          	</ol>
+          </nav>
+        </div>
+
+        <div class="title">
+          <h1 class="title_text">线上调制</h1>
+        </div>
+
+
+        <div class="main_content">
+          <div class="step step1 -on">
+            <p>步驟一：請點選三個基本色墨水</p>
+            <div class="ink_bottles">
+              <img id="red" class="bottle" src="./images/ink/ink_online/red.png" alt="" onclick="chooseColor(this)">
+              <img id="orange" class="bottle" src="./images/ink/ink_online/orange.png" alt="" onclick="chooseColor(this)">
+              <img id="yellow" class="bottle" src="./images/ink/ink_online/yellow.png" alt="" onclick="chooseColor(this)">
+              <img id="green" class="bottle" src="./images/ink/ink_online/green.png" alt="" onclick="chooseColor(this)">
+              <img id="blue" class="bottle" src="./images/ink/ink_online/blue.png" alt="" onclick="chooseColor(this)">
+              <img id="purple" class="bottle" src="./images/ink/ink_online/purple.png" alt="" onclick="chooseColor(this)">
+            </div>
+            <div class="colorLabelGrp">
+              <label class="colorLabel" for="red" data-color="red">勃根地紅</label>
+              <label class="colorLabel" for="orange" data-color="orange">印度橙</label>
+              <label class="colorLabel" for="yellow" data-color="yellow">毛莨花黃</label>
+              <label class="colorLabel" for="green" data-color="green">草原綠</label>
+              <label class="colorLabel" for="blue" data-color="blue">峽灣藍</label>
+              <label class="colorLabel" for="purple" data-color="purple">月牙紫</label>
+            </div>
+
+            <div class="mobile_step1">
+              <div class="ink_block">
+                <div class="colorBlock red" data-color="red"></div>
+                <div class="colorBlock orange" data-color="orange"></div>
+                <div class="colorBlock yellow" data-color="yellow"></div>
+                <div class="colorBlock green" data-color="green"></div>
+                <div class="colorBlock blue" data-color="blue"></div>
+                <div class="colorBlock purple" data-color="purple"></div>
+              </div>
+              <p>已選取：</p>
+              <div class="ink_choosen"></div>
+
+            </div>
+
+
+            <label id="selectNum">0</label>
+
+            <div class="btn">
+              <button type="button" name="button" class="cancel left">重新選取</button>
+              <button type="button" name="button" class="toStep2">下一步</button>
+            </div>
+
+          </div>
+
+
+          <div class="step step2">
+            <p>步驟二：請調整您想要的墨水顏色比例</p>
+            <div class="selected_container">
+
+              <div id="selected_ink" class="selected_ink"></div>
+              <div id="selectedInkLabel"></div>
+              <div class="adjust">
+                <div class="adj1">
+                  <i class="fas fa-minus-circle" id="minus_1"></i>
+                  <input type="text" name="" value="1" id="inkText1">
+                  <i class="fas fa-plus-circle" id="plus_1"></i>
+                </div>
+                <div class="adj2">
+                  <i class="fas fa-minus-circle" id="minus_2"></i>
+                  <input type="text" name="" value="1" id="inkText2">
+                  <i class="fas fa-plus-circle" id="plus_2"></i>
+                </div>
+                <div class="adj3">
+                  <i class="fas fa-minus-circle" id="minus_3"></i>
+                  <input type="text" name="" value="1" id="inkText3">
+                  <i class="fas fa-plus-circle" id="plus_3"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="btn">
+              <button class="toStep1 left" type="button" name="button" >上一步</button>
+              <button class="manufacture" type="button" name="button">開始調製</button>
+            </div>
+
+          </div>
+
+
+          <div class="step step3">
+            <p>調配完成！專屬於您的老派特調！</p>
+            <div class="finish">
+              <img src="./images/ink/ink_online/result.png" alt="">
+              <p>專屬配方：</p>
+              <div class="customizeRatio">
+              </div>
+            </div>
+            <div class="btn">
+              <button class="refresh left" type="button" name="button" >重新調製</button>
+              <button class="order" type="button" name="button">放入購物車</button>
+              <button class="ratio left" type="button" name="button" >收藏配方</button>
+
+            </div>
+          </div>
+        </div>
+
+        <footer class="moblie_footer">
+          <p class="footer_text left_p">老派浪漫 鋼筆工作室<br>台北市中山區南京東路三段219號<br>Copyright ⓒ 老派浪漫 Co., Ltd.</p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></i></a>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <script>
+
+    $(function(){
+      // hamburger icon 的切換
+      $("button.hamburger").on("click", function(){
+        $(this).toggleClass("is-active");
+        $("div.nav_wrap").slideToggle();
+      });
+    });
+
+    function chooseColor(myImg){
+      let selectN = $("#selectNum").text();
+      if($(myImg).hasClass('selected')){
+        // 已被選過的墨水不再加入第二步驟
+      }
+      else if(selectN < 3){
+        var imgID = "img#" + myImg.id;
+        $(imgID).addClass("selected");
+
+        // console.log(`<img id="sInk${(parseInt(selectN)+1)}" src="./images/ink/ink_online/${myImg.id}.png">`);
+
+        $('#selected_ink').append(`<img id="sInk${(parseInt(selectN)+1)}" src="./images/ink/ink_online/${myImg.id}.png">`)
+        $('.ink_choosen').append(`<img src="./images/ink/ink_online/${myImg.id}.png">`);
+
+
+        // 插入墨水名稱
+        let color = myImg.id;
+        let labelFor = $('.colorLabel');
+        for(let i=0; i<labelFor.length; i++){
+          if(($(labelFor[i]).attr('for')) == color){
+            $('#selectedInkLabel').append(`<label for="${color}">${$(labelFor[i]).text()}</label>`);
+            // $('.customizeRatio').append(`<p class="${color}">${$(labelFor[i]).text()}</p>`);
+          }
+        }
+
+
+
+        selectN = parseInt(selectN) + 1;
+      }
+      else{
+        alert("友善提醒：已經選好3種顏色囉！繼續下一步吧！");
+      }
+
+      $("#selectNum").text(selectN);
+    };
+
+
+    /* ---- 步驟一label外觀樣式hover效果 ---- */
+    $('.bottle').hover(function() {
+      /* Stuff to do when the mouse enters the element */
+      let labelFor = $('.colorLabel');
+      for(let i=0; i<labelFor.length; i++){
+        if(($(labelFor[i]).attr('for')) == $(this).attr('id')){
+          console.log($(labelFor[i]).attr('for'));
+          $(labelFor[i]).css({
+            backgroundColor: `${$(labelFor[i]).attr('for')}`,
+            color: 'white',
+            fontFamily: 'TaipeiFontReg'
+          });
+        }
+      }
+    }, function() {
+      /* Stuff to do when the mouse leaves the element */
+      $('.colorLabel').css({
+        backgroundColor: 'rgba(0,0,0,0)',
+        color: 'black',
+        fontFamily: 'TaipeiFontLight'
+      });
+    });
+
+
+    /* ---- 下一步: 進入步驟二 ---- */
+    $("button.toStep2").on("click", function(){
+      var selectN = $("#selectNum").text();
+      if(selectN >= 3){
+        $("div.step1").toggleClass("-on");
+        $("div.step2").toggleClass("-on");
+      }
+      else{
+        alert("友善提醒：請選取三種墨水顏色。");
+      }
+    });
+
+    /* ---- 重新選取: 重選墨水 ---- */
+    $("button.cancel").on("click", function(){
+      // 選取數量清空為0 ,再存回label
+      var selectN = $("#selectNum").text();
+      selectN = 0;
+      $("#selectNum").text(selectN);
+      //移除所有class selected
+      $("img.bottle").removeClass("selected");
+      $('.colorBlock').removeClass('selected');
+
+      //移除所有選過的墨水瓶img
+      var selected_ink = document.getElementById("selected_ink");
+      selected_ink.innerHTML = "";
+
+      $('.ink_choosen > img').remove();
+      $('#selectedInkLabel').children('label').remove();
+      $('.customizeRatio').children('p').remove();
+    });
+
+
+    /* --- 色塊選取墨水 --- */
+    $('.colorBlock').on('click', function(){
+      let color = $(this).attr('data-color');
+      let selectN = $("#selectNum").text();
+
+
+      if($(this).hasClass('selected')){
+        alert(`${color}已被您選取囉!`);
+      }else if(selectN < 3){
+        $(this).addClass('selected');
+
+        $('.ink_choosen').append(`<img src="./images/ink/ink_online/${color}.png">`);
+
+        $('#selected_ink').append(`<img id="sInk${(parseInt(selectN)+1)}" src="./images/ink/ink_online/${color}.png">`);
+
+        // 插入墨水名稱
+        let labelFor = $('.colorLabel');
+        for(let i=0; i<labelFor.length; i++){
+          if(($(labelFor[i]).attr('for')) == $(this).attr('data-color')){
+            $('#selectedInkLabel').append(`<label for="${color}">${$(labelFor[i]).text()}</label>`);
+            // $('.customizeRatio').append(`<p class="${color}">${$(labelFor[i]).text()}</p>`);
+          }
+        }
+
+
+        $(`#${color}`).addClass('selected');
+
+        selectN = parseInt(selectN) + 1;
+      }else{
+        alert("友善提醒：已經選好3種顏色囉！繼續下一步吧！");
+      }
+
+      // 更新選取顏色數量
+      $("#selectNum").text(selectN);
+
+    });
+
+
+
+    /* ---- 開始調製: 進入第三步 ---- */
+    $("button.manufacture").on("click", function(){
+      $("div.step3").toggleClass("-on");
+      $("div.step2").toggleClass("-on");
+
+      // 插入墨水比例進入步驟三
+
+      // 算出總滴數, 再個別算出占比
+      let totalDrip = parseInt($('#inkText1').val()) + parseInt($('#inkText2').val()) + parseInt($('#inkText3').val());
+      let color1Percent = Math.round((parseInt($('#inkText1').val()) / totalDrip) * 100);
+      let color2Percent = Math.round((parseInt($('#inkText2').val()) / totalDrip) * 100);
+      let color3Percent = Math.round((parseInt($('#inkText3').val()) / totalDrip) * 100);
+      let colorPercentArr = [color1Percent, color2Percent, color3Percent];
+      // console.log(totalDrip);
+      // console.log(color1Percent);
+      // console.log(color2Percent);
+      // console.log(color3Percent);
+
+      // 插入墨水名稱
+      let labelFor = $('#selectedInkLabel').children('label');
+
+      for(let i=0;i<labelFor.length;i++){
+        $('.customizeRatio').append(`<p>${$(labelFor[i]).text()}：${colorPercentArr[i]} %</p>`);
+      }
+
+
+
+
+
+
+    });
+
+    /* ---- 上一步: 回到步驟一 ----*/
+    $("button.toStep1").on("click", function(){
+      $("div.step1").toggleClass("-on");
+      $("div.step2").toggleClass("-on");
+      // 重設墨色比例
+      $('#inkText1').val(1);
+      $('#inkText2').val(1);
+      $('#inkText3').val(1);
+    });
+
+
+    /* ---- 重新調製: 回到步驟一 ---- */
+    $("button.refresh").on("click", function(){
+      $("div.step1").addClass("-on");
+      $("div.step2").removeClass("-on");
+      $("div.step3").removeClass("-on");
+      // 重設墨色比例
+      $('#inkText1').val(1);
+      $('#inkText2').val(1);
+      $('#inkText3').val(1);
+      // 選取數量清空為0 ,再存回label
+      var selectN = $("#selectNum").text();
+      selectN = 0;
+      $("#selectNum").text(selectN);
+      //移除所有class selected
+      $("img.bottle").removeClass("selected");
+      //移除所有選過的墨水瓶img
+      var selected_ink = document.getElementById("selected_ink");
+      selected_ink.innerHTML = "";
+
+      // 手機板
+      $('.colorBlock').removeClass('selected');
+      $('.ink_choosen > img').remove();
+
+      $('#selectedInkLabel').children('label').remove();
+      $('.customizeRatio').children('p').remove();
+    });
+
+    /* ---- 收藏配方 ----*/
+    $("button.ratio").on("click", function(){
+      // $("div.customizeRatio").toggleClass("-open");
+    });
+
+    /* --- 加減墨水 --- */
+    $('.fa-minus-circle').click(function(event) {
+      let thisId = $(this).attr('id');
+      console.log(thisId);
+
+      let inkText1 = $('#inkText1').val();
+      let inkText2 = $('#inkText2').val();
+      let inkText3 = $('#inkText3').val();
+
+      switch (thisId.substr(6)) {
+        case '1':
+          if(inkText1 == 1){
+            alert("友善提醒：每種墨色至少加入一滴喔。");
+            return;
+          }else{
+            inkText1 = parseInt(inkText1) - 1;
+            $('#inkText1').val(inkText1);
+          }
+          break;
+        case '2':
+          if(inkText2 == 1){
+            alert("友善提醒：每種墨色至少加入一滴喔。");
+            return;
+          }else{
+            inkText2 = parseInt(inkText2) - 1;
+            $("#inkText2").val(inkText2);
+          }
+          break;
+        case '3':
+          if(inkText3 == 1){
+            alert("友善提醒：每種墨色至少加入一滴喔。");
+            return;
+          }else{
+            inkText3 = parseInt(inkText3) - 1;
+            $("#inkText3").val(inkText3);
+          }
+          break;
+        default:
+      }
+    });
+
+    $('.fa-plus-circle').click(function(event) {
+      let thisId = $(this).attr('id');
+      // console.log(thisId.substr(5));
+      let imgID = `img#sInk${thisId.substr(5)}`;
+      let inkText1 = $('#inkText1').val();
+      let inkText2 = $('#inkText2').val();
+      let inkText3 = $('#inkText3').val();
+
+      switch (thisId.substr(5)) {
+        case '1':
+          if(inkText1 == 3){
+            alert("友善提醒：每種墨色最多加入三滴喔。");
+            return;
+          }
+          break;
+        case '2':
+          if(inkText2 == 3){
+            alert("友善提醒：每種墨色最多加入三滴喔。");
+            return;
+          }
+          break;
+        case '3':
+          if(inkText3 == 3){
+            alert("友善提醒：每種墨色最多加入三滴喔。");
+            return;
+          }
+          break;
+        default:
+      }
+
+      console.log(`#${imgID}`);
+      $(`${imgID}`).addClass('selected');
+
+      // 設定隔2秒後，移除相關 class
+      setTimeout(function(){
+        $(`${imgID}`).removeClass("selected");
+      }, 1500);
+
+      if(thisId.substr(5) == 1){
+        inkText1 = parseInt(inkText1) + 1;
+        $('#inkText1').val(inkText1);
+
+        setTimeout(function(){
+          $("#ink1Ratio").removeClass("-drip");
+        }, 1000);
+      }
+      else if(thisId.substr(5) == 2){
+        inkText2 = parseInt(inkText2) + 1;
+        $("#inkText2").val(inkText2);
+
+        setTimeout(function(){
+          $("#ink2Ratio").removeClass("-drip");
+        }, 1000);
+      }
+      else if(thisId.substr(5) == 3){
+        inkText3 = parseInt(inkText3) + 1;
+        $("#inkText3").val(inkText3);
+
+        setTimeout(function(){
+          $("#ink3Ratio").removeClass("-drip");
+        }, 1000);
+      }
+
+    });
+
+
+    </script>
+  </body>
+</html>

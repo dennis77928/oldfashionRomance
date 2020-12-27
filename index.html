@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <title>老派浪漫</title>
+    <link href="./hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+      <div class="left_bar">
+        <div class="logo">
+          <img src="./images/logo/Logo_circle.png" alt="老派浪漫">
+        </div>
+        <div class="logo_title">
+          <p class="left_p">老派</p>
+          <p class="left_p">浪漫</p>
+        </div>
+        <div class="intro">
+          <p class="intro_description left_p">一支钢笔，一张纸。<br>满满的心意，寄托在手写的温度之上。<br>这时代，我们依然着迷於老派的浪漫。<p>
+        </div>
+        <div class="intro_mobile">
+          <p class="intro_description left_p">一支钢笔<br>一张纸<br>满满的心意<br>寄托在手写的温度之上<br><br>这时代<br>我们依然着迷於老派的浪漫<p>
+        </div>
+        <div class="footer">
+          <p class="footer_text left_p">老派浪漫 鋼筆工作室<br>台北市中山區南京東路三段219號<br>Copyright ⓒ 老派浪漫 Co., Ltd.</p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="right_main">
+        <ul>
+          <li>
+            <a href="./concept.html">
+            <!-- <a href="#"> -->
+              <img src="./images/home/concept_s.png" alt="老派故事">
+              <div class="bg_mask"></div>
+              <p class="title">老派故事</p>
+              <p class="content">
+                老派的手写，<br>在笔划间活出自己的故事，<br>更留下专属於我们的印记。
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="./ink.html">
+              <img src="./images/home/ink_s.png" alt="老派特调">
+              <div class="bg_mask"></div>
+              <p class="title">老派特调</p>
+              <p class="content">
+                世界充满色彩，<br>
+                我们何必从有限的颜色中进行选择？<br>
+                每个人都应该拥有能够代表自己的颜色。
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="./store.html">
+              <img src="./images/home/store.jpg" alt="老实商店">
+              <div class="bg_mask"></div>
+              <p class="title">老实商店</p>
+              <p class="content">
+                货真价实，童叟无欺。<br>
+                纯正好物期待有缘人来把它带走。
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="./knowledge.html">
+              <img src="./images/home/knowledge_s.png" alt="老学问">
+              <div class="bg_mask"></div>
+              <p class="title">老学问</p>
+              <p class="content">
+                「写字」是一门艺术，也是大学问！<br>
+                其中的知识，让我们从笔和墨说起。
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="./index.html">
+              <img src="./images/home/share_s.png" alt="分享浪漫">
+              <div class="bg_mask"></div>
+              <p class="title">分享浪漫</p>
+              <p class="content">
+                我有笔，你有故事吗？<br>
+                来到这里，与大家分享你的手写浪漫吧！
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <footer class="moblie_footer">
+        <p class="footer_text left_p">老派浪漫 鋼筆工作室<br>台北市中山區南京東路三段219號<br>Copyright ⓒ 老派浪漫 Co., Ltd.</p>
+        <div class="icon">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-instagram-square"></i></a>
+          <a href="#"><i class="fab fa-line"></i></i></a>
+        </div>
+      </footer>
+    <!-- </div> -->
+    <script>
+      $(function(){
+        // hamburger icon 的切換
+        $("button.hamburger").on("click", function(){
+          $(this).toggleClass("is-active");
+          $("div.nav_wrap").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>

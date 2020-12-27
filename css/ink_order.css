@@ -1,0 +1,265 @@
+@import "./common/reset.css";
+@import "./common/fonts.css";
+@import "./common/left_navBar.css";
+@import "./common/basic_layout.css";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 0;
+  font-family: "YaoFont";
+}
+
+a#ink_navlink::after{
+  content: "";
+  background-color: #DDA52D;
+  height: 10px;
+  display: block;
+}
+
+
+form.order_form{
+  /* border: 1px solid black; */
+  font-size: 30px;
+  font-family: "TaipeiFontReg";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form.order_form > div{
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+div > div.label_group,
+div > div.text_group{
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: column;
+}
+
+div > div.label_group{
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+div > div.text_group{
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+div.label_group > label,
+div.text_group > input{
+  margin-bottom: 30px;
+}
+div.label_group > label{
+  padding-top: 3px;
+}
+
+div.text_group > input{
+  /* border: 1px solid blue; */
+  outline: none;
+  height: 36px;
+  width: 500px;
+  background-color: rgba(255,255,255,.3);
+  font-size: 24px;
+  font-family: "TaipeiFontLight";
+  padding: 0 8px;
+}
+
+div.text_group > input:focus{
+  border: 3px solid #DDA52D;
+}
+
+div.date_time{
+  display: flex;
+  flex-wrap: wrap;
+}
+div.date_time > div{
+  /* border: 1px solid red; */
+  margin: 20px 50px;
+}
+
+div#datepicker{
+  font-size: 28px;
+  font-family: "TaipeiFontLight";
+
+  background-color: rgba(0,0,0,0);
+}
+
+div.timepicker{
+  display: flex;
+  flex-direction: column;
+}
+
+div.timepicker > label{
+  margin-bottom: 10px;
+}
+
+select.timeSelect{
+  outline:none;
+  border:2px solid #666;
+  font-size: 24px;
+  font-family: "TaipeiFontReg";
+  margin-bottom: 40px;
+  width: 200px;
+  height: 50px;
+  background-color: rgba(0,0,0,0);
+}
+
+div.button_group > button{
+  font-size: 24px;
+  font-family: "TaipeiFontReg";
+  color: white;
+  border: 2px solid #DDA52D;
+  border-radius: 7px;
+  padding: 10px 15px;
+  cursor: pointer;
+  outline: none;
+  background-color: #DDA52D;
+  margin: 0 30px;
+  width: 150px;
+  box-shadow: 2px 2px 1px gray;
+}
+div.button_group > button.refresh{
+  border: 2px solid #28435D;
+  background: rgba(0,0,0,0);
+  color: #28435D;
+  transition: all .3s;
+}
+
+div.button_group > button.order{
+  transform: scale(1.1);
+  transition: transform .3s;
+}
+div.button_group > button.order:hover{
+  transform: scale(1.2);
+  box-shadow: 4px 4px 1px gray;
+}
+
+div.button_group > button.refresh:hover{
+  background-color: #28435D;
+  color: white;
+  box-shadow: 2px 2px 1px gray;
+}
+
+
+
+
+
+/* datepicker樣式修改 */
+.ui-widget.ui-widget-content{
+    border: none;
+}
+
+.ui-widget-content{
+    border: none;
+    background: rgba(0,0,0,0);
+    color: #222222;
+}
+
+.ui-widget-header {
+    border: none;
+    background: rgba(221, 165, 45, 0.5);
+    color: #222222;
+    font-weight: lighter;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover{
+	border: none;
+	background: rgba(221, 165, 45, 0);
+	font-weight: normal;
+	color: #222222;
+}
+
+.ui-datepicker td a {
+    display: block;
+    padding: .2em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.ui-datepicker td a:hover{
+  background-color: rgba(221, 165, 45, 0.5);
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+    border: none;
+    /* background: none; */
+    font-weight: normal;
+    color: #555555;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight{
+  background: #28435D;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  form.order_form{
+    font-size: 20px;
+  }
+  div > div.label_group {
+    margin-right: 3px;
+  }
+  div.text_group > input{
+    height: 27px;
+    width: 380px;
+    font-size: 20px;
+  }
+  div#datepicker{
+    font-size: 20px;
+  }
+  select.timeSelect{
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .ui-datepicker td a {
+      font-size: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  form.order_form{
+    font-size: 16px;
+  }
+  div.label_group > label,
+  div.text_group > input{
+    margin-bottom: 12px;
+  }
+
+  div.text_group > input{
+    width: 280px;
+    font-size: 16px;
+  }
+  div.label_group > label{
+    margin-bottom: 40px;
+  }
+
+  div > div.label_group {
+    margin-right: -90px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  div.text_group > input{
+    margin-top: 22px;
+  }
+  div#datepicker{
+    font-size: 16px;
+  }
+  .ui-datepicker td a {
+      font-size: 16px;
+  }
+  div.button_group > button{
+    font-size: 20px;
+    margin: 0 20px;
+    width: 130px;
+  }
+}

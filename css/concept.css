@@ -1,0 +1,146 @@
+@import "./common/reset.css";
+@import "./common/fonts.css";
+@import "./common/left_navBar.css";
+@import "./common/basic_layout.css";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 0;
+  font-family: "YaoFont";
+}
+
+/* ------- nav bar highlight ------- */
+a#concept_navlink::after{
+  content: "";
+  /* border: 1px solid #DDA52D; */
+  background-color: #DDA52D;
+  height: 10px;
+  display: block;
+}
+
+/* ------- banner ------- */
+div.banner{
+  display: flex;
+}
+div.banner img.carousel_img{
+  width: 100%;
+}
+/* 隱藏slick按鈕 */
+button.slick-arrow{
+  display: none !important;
+}
+
+/* ------- subtitle ------- */
+div.subtitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.subtitle h2.subtitle_text{
+  /* border: 1px solid green; */
+  font-size: 44px;
+  font-family: "TaipeiFontReg";
+  color: #28435D;
+  margin: 70px 0;
+  text-shadow: 0px 0px 3px gray;
+}
+
+/* ------- main content ------- */
+div.main_content{
+  /* border: 5px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 24px;
+  background-image: url("../images/concept/fountain-pen.png");
+  background-position: right 30px bottom 100px;
+  background-repeat: no-repeat;
+}
+
+div.main_content p{
+  /* border: 1px solid black; */
+  font-family: "TaipeiFontLight";
+  line-height: 1.8;
+  color: #28435D;
+  text-shadow: 1px 1px 1px gray;
+  margin: 20px 100px;
+}
+
+div.main_content p.author{
+  margin-bottom: 0;
+}
+div.main_content p.quote_text{
+  font-family: "TaipeiFontReg";
+  background-color: rgba(221, 165, 45, 0.5); /*#DDA52D*/
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+
+div.main_content p.last_line{
+  background-image: url("../images/concept/sig_m.png");
+  background-position: right 350px bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+div.signature{
+  /* border: 1px solid black; */
+  height: 50px;
+  background-image: url("../images/concept/sig_m.png");
+  background-size: contain;
+  background-position: left 20% bottom;
+  background-repeat: no-repeat;
+  margin-bottom: 100px;
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  div.main_content{
+    background-position: right 30px bottom 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.subtitle h2.subtitle_text{
+    /* font-size: 5.3vw; */
+    font-size: 36px;
+    /* width: 5vw; */
+    writing-mode: vertical-lr ;
+    line-height: 1.6;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* height: 100vh; */
+    height: 700px;
+  }
+  div.main_content{
+    /* background-image: none; */
+    background-size: 40%;
+  }
+  div.main_content p.last_line{
+    background-image: none;
+    margin-bottom: 30px;
+  }
+  div.main_content p{
+    font-size: 4vw;
+    line-height: 1.6;
+    margin: 20px 60px;
+  }
+  div.signature{
+    display: block;
+
+  }
+  .moblie_footer{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.subtitle h2.subtitle_text{
+    font-size: 30px;
+    height: 600px;
+  }
+}

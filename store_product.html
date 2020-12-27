@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <title>老實商店</title>
+    <link href="./hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="./css/store_product.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="left_bar">
+        <div class="logo">
+          <a href="./index.html">
+            <img class="logo_img" src="./images/logo/Logo_circle.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a id="ink_navlink" href="./ink.html">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="#">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="./knowledge.html">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-line"></i>
+        </div>
+      </div>
+
+      <nav class="hamburger_wrap">
+        <button class="hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="logo_mobile">
+          <a href="./index.html">
+            <img class="logo_img_mobile" src="./images/logo/Logo_circle_small.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a a id="ink_navlink" href="./ink.html">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="#">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="./knowledge.html">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="shopping_icon">
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+          <a href="#"><i class="far fa-heart"></i></a>
+        </div>
+      </nav>
+
+      <div class="right_main">
+        <div class="breadcrumb">
+          <nav>
+          	<ol>
+          		<li><a href="./index.html">老派浪漫</a></li>
+          		<li><a href="./store.html">老實商店</a></li>
+          		<li>鋼筆</li>
+          	</ol>
+          </nav>
+        </div>
+
+        <div class="title">
+          <h1 class="title_text">老实商店</h1>
+        </div>
+
+
+        <div class="main_content">
+          <div class="product_main">
+            <div class="product_img">
+              <div class="img_small">
+                <div class="small">
+                  <img src="./images/store/store_product/viscont_1-1.png" alt="">
+                </div>
+                <div class="small">
+                  <img src="./images/store/store_product/viscont_1-2.png" alt="">
+                </div>
+                <div class="small">
+                  <img src="./images/store/store_product/viscont_1-3.png" alt="">
+                </div>
+                <div class="small">
+                  <img src="./images/store/store_product/viscont_1-4.png" alt="">
+                </div>
+
+              </div>
+              <div class="img_main">
+                <img id="mainImg" src="./images/store/store_product/viscont_1-1.png" alt="">
+              </div>
+
+            </div>
+            <div class="product_info">
+              <form class="info_form" action="index.html" method="post">
+                <p class="price">NT $6,800</p>
+                <label>款式</label>
+                <select class="penSelect" id="penStyleSelect" name="penStyle">
+                  <option value="1" selected>小麥田</option>
+                  <option value="2">粉桃樹</option>
+                </select>
+                <label>筆幅</label>
+                <select class="penSelect" id="penNibSelect" name="penStyle">
+                  <option value="1" selected>F尖</option>
+                  <option value="2">EF尖</option>
+                  <option value="3">M尖</option>
+                </select>
+                <label>數量</label>
+                <ul class="counter">
+                  <li id="minus">
+                    <i class="far fa-minus-square" onclick="minuser()"></i>
+                  </li>
+                  <li id="countnum">0</li>
+                  <li id="plus">
+                    <i class="far fa-plus-square" onclick="adder()"></i>
+                  </li>
+                </ul>
+
+                <button id="buy" type="button" name="button">
+                  <span>加入購物車</span>
+                  <i class="fas fa-shopping-bag"></i>
+                </button>
+                <button id="favorite" type="button" name="button">
+                  <span>收藏</span>
+                  <i class="far fa-heart"></i>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+          <div class="product_title">
+            <h2>VISCONTI｜梵谷銀夾系列鋼筆</p>
+          </div>
+
+          <div class="procuct_detail">
+
+            <div class="tab_container">
+              <div class="tab_list_block">
+                <ul class="tab_list">
+                  <li><a href="#" data-target="tab1" class="tab -on">商品描述</a></li>
+                  <li><a href="#" data-target="tab2" class="tab">運送方式</a></li>
+                </ul>
+              </div>
+
+              <div class="tab_contents">
+                <div class="tab tab1 -on">
+                  <p>義大利Visconti選擇了幾幅梵谷的代表作品</p>
+                  <p>結合書寫精品的工藝，呈現出完美的梵谷系列筆款</p>
+                  <p>梵谷系列推出的筆款，分別對應梵谷不同的畫作</p><br>
+                  <p>鮮豔的混色筆身是梵谷系列最大的特色</p>
+                  <p>即使是同款鋼筆的筆身，也不會擁有一模一樣的花紋</p>
+                  <p>因此，梵谷系列的任何一款筆能說是獨一無二的</p>
+                  <p>而標配梵谷系列筆款特殊的筆盒</p>
+                  <p>筆盒裏頭印有梵谷的畫作，相當適合珍藏。</p><br>
+                  <p>筆深含蓋長：14.3cm</p>
+                  <p>筆身直徑約：1.4cm</p>
+                  <p>筆尖:不鏽鋼，歐規F尖</p>
+                  <p>附：筆盒，吸墨器</p>
+                </div>
+
+                <div class="tab tab2">
+                  <p>購物未滿一千運費固定收取60元，滿1000元免運費</p>
+                  <p>均以郵局掛號或<a href="http://140.115.236.71/demo-personal/TED101/web/202007-WD01015/" target="_blank">嘉里大榮</a>物流方式寄送</p><br>
+                  <p>完成付款後約 2~3個工作天會收到商品。</p>
+                  <p>若有急件需採「黑貓宅急便」寄送的話</p>
+                  <p>請在訂單中直接選取</p>
+                  <p>黑貓宅配隔日配送最後下單的時間為週五15時以前</p>
+                  <p>週日店休，恕不寄件</p><br>
+                  <p>運費計算公式如下：</p>
+                  <p>購物未滿一千運費為100元 / 購物滿一千運費為50元</p>
+                  <p>收取的運費與實際運費間之差距多不退少不補，</p>
+                  <p>下標即表示買方同意上開運費收取方式，</p>
+                  <p>若有疑問請買方在下標前反應。</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <h2 class="recommend_title">推薦商品</h2>
+          <div class="product_recommend">
+            <div class="recommend_item">
+              <a href="#">
+                <img src="./images/store/platium.png" alt="">
+                <p>PLATIUM 台灣檜木鋼筆</p>
+              </a>
+            </div>
+            <div class="recommend_item">
+              <a href="#">
+                <img src="./images/store/sailor_3-3.png" alt="">
+                <p>SAILOR 18K金尖鋼筆</p>
+              </a>
+            </div>
+            <div class="recommend_item">
+              <a href="#">
+                <img src="./images/store/sailor_2-1.jpg" alt="">
+                <p>SAILOR 21K金尖鋼筆</p>
+              </a>
+            </div>
+            <div class="recommend_item">
+              <a href="#">
+                <img src="./images/store/KWZ_sheen_machine.png" alt="">
+                <p>KWZ SHEEN 渲染墨水</p>
+              </a>
+            </div>
+            <div class="recommend_item">
+              <a href="#">
+                <img src="./images/store/platium.png" alt="">
+                <p>PLATIUM 台灣檜木鋼筆</p>
+              </a>
+            </div>
+            <div class="recommend_item">
+              <a href="#">
+                <img src="./images/store/sailor_3-3.png" alt="">
+                <p>SAILOR 18K金尖鋼筆</p>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <footer class="moblie_footer">
+          <p class="footer_text left_p">老派浪漫 鋼筆工作室<br>台北市中山區南京東路三段219號<br>Copyright ⓒ 老派浪漫 Co., Ltd.</p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></i></a>
+          </div>
+        </footer>
+
+        <button type="button" class="go_top"></button>
+      </div>
+    </div>
+
+
+    <script>
+      $(function(){
+
+        //商品換圖
+        $('.small').on("click", function(e){
+          if($('#mainImg').attr('src') != e.target.src){ //圖片不同才進行換圖
+            $('#mainImg').animate({
+              opacity: 0,
+            },10).animate({
+              opacity: 1,
+            }).attr('src', e.target.src);
+          }
+        });
+
+        // hamburger icon 的切換
+        $("button.hamburger").on("click", function(){
+          $(this).toggleClass("is-active");
+          $("div.nav_wrap").slideToggle();
+        });
+
+        // go top
+        $(".go_top").on("click", function(e){
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: 0
+          }, 500);
+        });
+
+        // 加入購物車
+        $('#buy').on("click", function(){
+          $('i.fa-shopping-bag').addClass('-addItem');
+          setTimeout(function(){
+            $('i.fa-shopping-bag').removeClass('-addItem');
+          }, 1000);
+        });
+        $('#favorite').on("click", function(){
+          $('i.fa-heart').addClass('-addItem');
+          setTimeout(function(){
+            $('i.fa-heart').removeClass('-addItem');
+          }, 1000);
+        });
+
+
+        $(window).scroll(function(){
+          var scroll_top = $(window).scrollTop();
+
+          if(scroll_top > 0){
+            $('.go_top').addClass('-onScroll');
+          }else{
+            $('.go_top').removeClass('-onScroll');
+          }
+        });
+
+
+        $("a.tab").on("click", function(e){
+          e.preventDefault();
+
+          /* 將頁籤列表移除所有 -on，再將指定的加上 -on */
+          $(this).closest("ul").find("a.tab").removeClass("-on");
+          $(this).addClass("-on");
+
+          /* 找到對應的頁籤內容，加上 -on 來顯示 */
+          $("div.tab").removeClass("-on");
+          $("div.tab." + $(this).attr("data-target")).addClass("-on");
+        });
+
+        /* 輪播套件參數設定 */
+        $(".product_recommend").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          arrows: true,
+          responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 800,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              arrows: false
+            }
+          }
+        ]
+        });
+
+      });
+
+      function adder(){
+      	var count=$("#countnum").text();
+        if(count < 3){
+          count=parseInt(count)+1;
+        }
+      	$("#countnum").text(count);
+      }
+
+      function minuser(){
+      	var count=$("#countnum").text();
+      	if(count<=0){
+      		count=0;
+      	}else{
+      		count=parseInt(count)-1;
+      	}
+      	$("#countnum").text(count);
+      }
+    </script>
+
+  </body>
+</html>

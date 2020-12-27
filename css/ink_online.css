@@ -1,0 +1,673 @@
+@import "./common/reset.css";
+@import "./common/fonts.css";
+@import "./common/left_navBar.css";
+@import "./common/basic_layout.css";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 0;
+  font-family: "YaoFont";
+}
+
+a#ink_navlink::after{
+  content: "";
+  background-color: #DDA52D;
+  height: 10px;
+  display: block;
+}
+
+div.main_content{
+  /* border: 1px solid red; */
+  /* height: calc(100% - 84px - 140px); */
+  /* height: 5000px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@keyframes jumping{
+  0% {
+    transform: translateY(10px) scale(.85);
+  }
+  50%{
+    transform: translateY(0) scale(.85);
+  }
+  100% {
+    transform: translateY(10px) scale(.85);
+  }
+}
+
+
+div.step{
+  /* border: 1px solid black; */
+  font-size: 30px;
+  /* margin-bottom: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.step2{
+  /* visibility:hidden; */
+}
+
+div.step > p{
+  /* border: 1px solid green; */
+  font-size: 30px;
+  font-family: "TaipeiFontLight";
+  margin-bottom: 30px;
+}
+
+div.step > div.ink_bottles{
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  /* margin-bottom: 20px; */
+}
+
+div.step > div.ink_bottles >img{
+  /* border: 1px solid black; */
+  margin: 10px 10px;
+  cursor: pointer;
+  transform: scale(.7);
+  transition: transform .4s;
+}
+
+div.step > div.ink_bottles >img.selected{
+  transform: scale(.8);
+
+  animation-name: jumping;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+div.step > div.ink_bottles >img:hover{
+  transform: scale(.8);
+}
+
+div.step1 > label#selectNum{
+  /* font-size: 20px; */
+  /* font-family: "TaipeiFontLight"; */
+  /* margin-bottom: 30px; */
+  display: none;
+}
+
+div.colorLabelGrp{
+  /* border: 1px solid red; */
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: 30px;
+}
+div.colorLabelGrp label{
+  /* border: 1px solid green; */
+  font-size: 24px;
+  font-family: "TaipeiFontLight";
+  margin: 0px 34px;
+  width: 100px;
+  text-align: center;
+}
+
+div.mobile_step1{
+  /* border: 1px solid green; */
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+
+div.ink_block{
+  /* border: 5px dotted #DDA52D; */
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+div.ink_block div{
+  /* border: 1px solid black; */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 3px 3px 1px gray;
+}
+.red{ background-color: rgba(255, 0, 0, 0.8); }
+.orange{ background-color: rgba(255, 165, 0, 0.8); }
+.yellow{ background-color: rgba(255, 255, 0, 0.8); }
+.green{ background-color: rgba(0, 128, 0, 0.8); }
+.blue{ background-color: rgba(0, 0, 255, 0.8); }
+.purple{ background-color: rgba(128, 0, 128, 0.8); }
+
+div.ink_block div.colorBlock{
+  transform: scale(1);
+  transition: transform .3s;
+
+}
+div.ink_block div.colorBlock:hover{
+  transform: scale(1.1);
+}
+div.ink_block div.colorBlock:active{
+  transform: scale(.9);
+}
+
+div.ink_choosen{
+  /* border: 1px solid red; */
+  border: 5px dotted #DDA52D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 450px;
+}
+
+@keyframes showOff {
+  70%{
+    transform: translateY(-30px) scale(.7);
+  }
+  100%{
+    transform: translateY(10px) scale(.6);
+  }
+}
+div.ink_choosen img{
+  animation-name: showOff;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+div.mobile_step1 p{
+  font-family: "TaipeiFontLight";
+  font-size: 20px;
+  margin: 50px 10px 5px 10px;
+}
+
+
+div.step2 > div.selected_container{
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+div.selected_container > div.selected_ink{
+  /* border: 1px solid purple; */
+  display: flex;
+  justify-content: center;
+}
+
+div.selected_ink > img{
+  margin: 30px 30px;
+  cursor: pointer;
+  width: 120px;
+  height: 325px;
+  transform: scale(.8);
+  transition: transform .6s;
+}
+
+@keyframes into {
+  0% {
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(15deg);
+  }
+  80% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}
+div.selected_ink > img.selected{
+  animation-name: into;
+  animation-duration: 1.3s;
+  animation-iteration-count: 1;
+}
+
+div.selected_ink > img:hover{
+  transform: scale(1.1);
+}
+
+
+
+div.step > div.btn{
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+div.step > div.btn > button{
+  font-size: 28px;
+  font-family: "TaipeiFontReg";
+  border: 2px solid #DDA52D;
+  background-color: #DDA52D;
+  padding: 10px 15px;
+  margin: 30px 30px;
+  color: white;
+  outline: none;
+
+  border-radius: 10px;
+  box-shadow: 3px 3px 1px gray;
+  cursor: pointer;
+  transform: scale(1);
+  /* transition: transform .3s */
+}
+div.step > div.btn > button:active{
+  transform: scale(.9);
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.1);
+  }
+  60%{
+    transform: scale(.95);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+div.step > div.btn > button.order{
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+div.step > div.btn > button:hover{
+  color: white;
+  background-color: #DDA52D;
+  /* transform: scale(1.1); */
+  animation: none;
+}
+
+div.selected_container > div.ratio{
+  display: flex;
+  font-family: "TaipeiFontReg";
+}
+
+div.selected_container > div.ratio > p{
+  margin: 10px 35px;
+}
+div.ratio > p > label{
+  display: inline-block;
+  transform: scale(1);
+  transition: transform .08s;
+  /* transition-timing-function: linear; */
+}
+div.ratio > p > label.-drip{
+  color: #DDA52D;
+  transform: scale(1.8);
+}
+
+div.step > div.btn > button.left{
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #28435D;
+  color: #28435D;
+  transform: scale(1);
+}
+div.step > div.btn > button.left:hover{
+  color: white;
+  background-color: #28435D;
+  box-shadow: 3px 3px 1px gray;
+}
+div.step > div.btn > button.left:active{
+  transform: scale(.9);
+}
+
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(.2) rotate(360deg);
+  }
+  100% {
+    transform: scale(.9) rotate(360deg);
+  }
+}
+
+@keyframes opacityEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.-on > div.finish{
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.-on > div.finish > img{
+  margin-bottom: 30px;
+  animation-name: jumping, zoomIn;
+  animation-duration: 3s, 4s;
+  animation-iteration-count: infinite, 1;
+  width: 80%;
+}
+div.finish > p{
+  font-family: "TaipeiFontLight";
+  font-size: 20px;
+  margin: 50px 10px 5px 10px;
+}
+div.finish > div.customizeRatio{
+  border: 5px dotted #DDA52D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: width .3s, height .3s;
+
+}
+
+
+div.finish > div.customizeRatio > p{
+  margin: 20px 0;
+  font-family: "TaipeiFontLight";
+}
+
+
+
+div.step.-on{
+  animation-name: opacityEffect;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+div.finish > img{
+
+}
+
+
+p{
+  text-shadow: 0 0 3px gray;
+}
+
+
+div.main_content > div{
+  display: none;
+
+}
+
+div.main_content > div.-on{
+  display: flex;
+}
+
+
+/* 加減滴數 */
+div.adjust{
+  /* border: 1px solid black; */
+  display: flex;
+}
+
+div.adjust div{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 24px;
+}
+div.adjust div input{
+  /* border: 1px solid red; */
+  border: none;
+  border-bottom: 2px solid #ccc;
+  width: 50px;
+  height: 30px;
+  margin: 0 10px;
+  font-size: 20px;
+  font-family: "TaipeiFontBold";
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  /* outline: none; */
+}
+div.adjust div i{
+  cursor: pointer;
+  text-shadow: 1px 1px 1px gray;
+  transform: scale(1);
+}
+div.adjust div i:active{
+  transform: scale(.9);
+}
+div.adjust div i.fa-plus-circle{
+  color: rgba(221, 165, 45, 0.9);
+}
+div.adjust div i.fa-minus-circle{
+  color: rgba(40, 67, 93, 0.9);
+}
+
+div#selectedInkLabel{
+  /* border: 1px solid red; */
+  display: flex;
+}
+div#selectedInkLabel label{
+  /* border: 1px solid green; */
+  font-size: 24px;
+  font-family: "TaipeiFontLight";
+  margin: -10px 40px 20px 40px;
+  width: 100px;
+  text-align: center;
+}
+
+@media screen and (min-width:1441px) {
+  div.right_main{
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  div.step > div.ink_bottles >img{
+    margin: 10px 5px;
+  }
+  div.colorLabelGrp label{
+    margin: 0px 30px;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 992px) {
+  div.step > p{
+    font-size: 28px;
+  }
+  div.step > div.ink_bottles{
+    display: none;
+  }
+  div.mobile_step1{
+    display: flex;
+  }
+  div.colorLabelGrp{
+    /* display: none; */
+    flex-wrap: wrap;
+    width: 330px;
+    margin-top: 20px;
+    margin-bottom: -80px;
+  }
+  div.colorLabelGrp label{
+    /* color: white; */
+    font-size: 20px;
+    margin: 0 0;
+    width: 100px;
+    z-index: 10;
+  }
+  div.colorLabelGrp label:nth-child(2),
+  div.colorLabelGrp label:nth-child(5){
+    /* color: red; */
+    margin: 0 15px;
+  }
+
+  div.colorLabelGrp label:nth-child(4),
+  div.colorLabelGrp label:nth-child(5),
+  div.colorLabelGrp label:nth-child(6){
+    margin-top: 130px;
+  }
+
+  div.ink_block {
+    margin-top: -120px;
+  }
+  div.ink_block div:nth-child(4),
+  div.ink_block div:nth-child(5),
+  div.ink_block div:nth-child(6){
+    margin-top: 35px;
+  }
+
+
+}
+@media screen and (max-width:768px) {
+  div.step > p{
+    font-size: 24px;
+  }
+  div.step > div.ink_bottles{
+    display: none;
+  }
+  div.mobile_step1{
+    display: flex;
+  }
+  div.selected_container > div.ratio > p {
+    font-size: 22px;
+    margin: 10px 40px;
+  }
+
+  div.selected_ink > img{
+    /* margin: 30px 40px; */
+    width: 100px;
+    height: 260px;
+  }
+  div.selected_ink > img:hover{
+    transform: scale(.8);
+  }
+  div.step > div.btn > button{
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+  div.step3 > div.btn > button{
+    margin: 30px 10px;
+  }
+  div.adjust div{
+    margin: 0 13px;
+  }
+
+  div#selectedInkLabel label {
+    margin: -10px 30px 20px 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  div.step > p{
+    font-size: 20px;
+  }
+  div.mobile_step1{
+    /* flex-direction: column; */
+  }
+  div.ink_block{
+    width: 250px;
+  }
+  div.ink_block div{
+    width: 50px;
+    height: 50px;
+  }
+  div.selected_container > div.ratio > p {
+    font-size: 18px;
+    margin: 10px 15px;
+  }
+  div.selected_ink > img{
+    margin: 30px 16px;
+    width: 90px;
+    height: 230px;
+  }
+  div.step > div.btn > button{
+    font-size: 18px;
+  }
+  div.ink_choosen img{
+    width: 100px;
+    height: 250px;
+  }
+  div.ink_choosen{
+    width: 310px;
+  }
+  div.adjust div input{
+    width: 30px;
+    font-size: 16px
+  }
+  div.adjust div i{
+    font-size: 22px
+  }
+  div.finish > div.customizeRatio > p{
+    font-size: 20px;
+  }
+
+  div#selectedInkLabel label {
+    font-size: 20px;
+    margin: -10px 0 20px 0;
+  }
+  div#selectedInkLabel label:nth-child(2) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
+  div.colorLabelGrp{
+    width: 216px;
+    margin-top: 20px;
+    margin-bottom: -30px;
+  }
+  div.colorLabelGrp label{
+    font-size: 16px;
+    width: 70px;
+  }
+  div.colorLabelGrp label:nth-child(2),
+  div.colorLabelGrp label:nth-child(5){
+    margin: 0 3px;
+  }
+
+  div.colorLabelGrp label:nth-child(4),
+  div.colorLabelGrp label:nth-child(5),
+  div.colorLabelGrp label:nth-child(6){
+    margin-top:80px;
+  }
+}
+@media screen and (max-width: 360px) {
+/* @media screen and (max-width: 320px) { */
+  div.step > p {
+    font-size: 16px;
+  }
+  div.ink_choosen{
+    width: 300px;
+  }
+  div.selected_ink > img{
+    margin: 10px 10px;
+    width: 75px;
+    height: 200px;
+  }
+  div.adjust div{
+    margin: 0px 11px;
+  }
+  div.adjust div input{
+    width: 30px;
+    font-size: 16px;
+    margin: 0 3px;
+  }
+  div.adjust div i{
+    font-size: 18px;
+  }
+
+  div#selectedInkLabel label {
+    font-size: 14px;
+    width: 80px;
+  }
+  div#selectedInkLabel label:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

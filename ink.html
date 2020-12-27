@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="utf-8">
+    <title>老派特調</title>
+    <link href="./hamburgers-master/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ink.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left_bar">
+        <div class="logo">
+          <a href="./index.html">
+            <img class="logo_img" src="./images/logo/Logo_circle.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a id="ink_navlink" href="#">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="./store.html">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="./knowledge.html">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-line"></i>
+        </div>
+      </div>
+
+      <nav class="hamburger_wrap">
+        <button class="hamburger hamburger--vortex" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <div class="logo_mobile">
+          <a href="./index.html">
+            <img class="logo_img_mobile" src="./images/logo/Logo_circle_small.png" alt="老派浪漫">
+          </a>
+        </div>
+        <div class="nav_wrap">
+          <ul>
+            <li>
+              <a id="concept_navlink" href="./concept.html">
+                <span>老派故事</span>
+              </a>
+            </li>
+            <li>
+              <a a id="ink_navlink" href="#">
+                <span>老派特调</span>
+              </a>
+            </li>
+            <li>
+              <a id="store_navlink" href="./store.html">
+                <span>老实商店</span>
+              </a>
+            </li>
+            <li>
+              <a id="knowledge_navlink" href="./knowledge.html">
+                <span>老学问</span>
+              </a>
+            </li>
+            <li>
+              <!-- <a id="share_navlink" href="./share.html"> -->
+              <a id="share_navlink" href="./index.html">
+                <span>分享浪漫</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="shopping_icon">
+          <a href="#"><i class="fas fa-shopping-bag"></i></a>
+          <a href="#"><i class="far fa-heart"></i></a>
+        </div>
+      </nav>
+
+
+      <div class="right_main">
+
+        <div class="breadcrumb">
+          <nav>
+          	<ol>
+          		<li><a href="./index.html">老派浪漫</a></li>
+          		<li>老派特調</li>
+          	</ol>
+          </nav>
+        </div>
+
+        <div class="title">
+          <h1 class="title_text">老派特调</h1>
+        </div>
+
+
+        <div class="main_content">
+          <ul>
+            <li>
+              <a class="online_alink" href="./ink_online.html">
+                <img class="online_img" src="./images/ink/ink_online_b.png" alt="線上調製">
+                <!-- <p class="online_title">线调<br>上制</p> -->
+                <p class="online_title">线上<br>调制</p>
+              </a>
+            </li>
+            <li>
+              <a class="order_alink" href="./ink_order.html">
+                <img class="order_img" src="./images/ink/ink_order_b.png" alt="線上調製">
+                <!-- <p class="order_title">预到<br>约店</p> -->
+                <p class="order_title">预约<br>到店</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <footer class="moblie_footer">
+          <p class="footer_text left_p">老派浪漫 鋼筆工作室<br>台北市中山區南京東路三段219號<br>Copyright ⓒ 老派浪漫 Co., Ltd.</p>
+          <div class="icon">
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></i></a>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+
+    <script>
+      $(function(){
+        // hamburger icon 的切換
+        $("button.hamburger").on("click", function(){
+          $(this).toggleClass("is-active");
+          $("div.nav_wrap").slideToggle();
+        });
+      });
+    </script>
+
+  </body>
+</html>

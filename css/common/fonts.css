@@ -1,0 +1,23 @@
+@font-face{
+  font-family: "YaoFont"; /* 自訂名稱 */
+  src: url("../../fonts/方正姚体繁体.woff"); /* 字體檔路徑 */
+  font-display: fallback; /* swap | fallback */
+}
+
+@font-face {
+  font-family: "TaipeiFontLight";
+  src: url("../../fonts/TaipeiSansTCBeta-Light.woff");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "TaipeiFontReg";
+  src: url("../../fonts/TaipeiSansTCBeta-Regular.woff");
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "TaipeiFontBold";
+  src: url("../../fonts/TaipeiSansTCBeta-Bold.woff");
+  font-display: fallback;
+}

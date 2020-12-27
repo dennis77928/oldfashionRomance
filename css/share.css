@@ -1,0 +1,19 @@
+@import "./common/reset.css";
+@import "./common/fonts.css";
+@import "./common/left_navBar.css";
+@import "./common/basic_layout.css";
+
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 0;
+  font-family: "YaoFont";
+}
+
+a#share_navlink::after{
+  content: "";
+  background-color: #DDA52D;
+  height: 10px;
+  display: block;
+}
